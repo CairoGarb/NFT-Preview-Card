@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      color: white;
+    }
+    
+    body {
+      background-color: hsl(217, 54%, 11%);
+      font-size: 18px;
+      width: 100%;
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: hsl(216, 50%, 16%);
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+/* Image */
+    .content h1 {
+      font-size: 18px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .content h1 a:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    .content p {
+      width: 300px;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 15px;
+      color: hsl(215, 51%, 70%);
+      
+    }
+
+    .img {
+      width: 300px;
+      height: 300px;
+      background-color: hsl(178, 100%, 50%);
+      position: relative;
+      
+    }
+
+    .img img {
+      width: 100%;
+      position: relative;
+    }
+
+    .img .img-equ:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .eye-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      z-index: -1;
+      
+    }
+
+    .img:hover .eye-icon {
+      z-index: 1;
+      pointer-events: none;
+    }
+/* Image */
+
+/* Info */
+    .info {
+      display: flex;
+    }
+
+    .info-eth {
+      display: flex;
+    }
+
+    .info-eth-img {
+      width: 12px;
+      height: 20px;
+      padding-right: 10px;
+    }
+    .info-eth img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .info-eth p {
+      color: hsl(178, 100%, 50%);
+      font-size: 16px;
+    }
+
+    .info-time {
+      display: flex;
+      position: absolute;
+      margin-left: 190px;
+    }
+
+    .info-time-img {
+      width: 20px;
+      height: 20px;
+      padding-right: 10px;
+    }
+
+    .info-time img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .info-time p {
+      color: hsl(215, 51%, 70%);
+      font-size: 16px;
+    }
+/* Info */
+
+/* Creator */
+    .creator {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      border-top: 1px solid hsl(215, 32%, 27%);
+    }
+
+    .creator-img {
+      width: 40px;
+      margin-top: 10px;
+    }
+    .creator img {
+      width: 100%;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+
+    .creator p {
+      padding-left: 15px;
+      color: hsl(215, 51%, 70%);
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .creator a:hover {
+      color: hsl(178, 100%, 50%);
+    }
+/* Creator */
+
+/* Footer */
+    .attribution { font-size: 11px; text-align: center; display: flex; justify-content: center; margin-top: 50px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+/* Footer */
+  </style>
+</head>
+<body>
+<!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="img">
+        <img class="img-equ" src="image-equilibrium.jpg" alt="equilibrium image">
+        <div class="eye-icon">
+          <img class="eye-icon-overlay" src="icon-view.svg" alt="eye icon">
+        </div>
+      </div>
+      <div class="content">
+        <h1><a href="">Equilibrium #3429</a></h1>
+        <p>Our equilibrium collection promotes balance and calm.</p>
+        <div class="info">
+          <div class="info-eth">
+            <div class="info-eth-img">
+              <img src="icon-ethereum.svg" alt="ethereum icon">
+            </div>
+            <p>0.041 ETH</p>
+          </div>
+          <div class="info-time">
+            <div class="info-time-img">
+              <img src="icon-clock.svg" alt="clock icon">
+            </div>
+            <p>3 days left</p>
+          </div>
+        </div>
+        <div class="creator">
+          <div class="creator-img">
+            <img src="image-avatar.png" alt="creator image">
+          </div>
+          <p>Creation of <a href="">Jules Wyvern</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Cairo Garbelotto</a>.
+    </div>
+  </footer>
+</body>
+</html>
